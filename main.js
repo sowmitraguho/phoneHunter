@@ -11,6 +11,7 @@ const loadPhones = async (searchText) => {
 function displayPhones(phones) {
     //console.log(phones[0])
     const phoneContainer = document.getElementById('phone-container');
+    phoneContainer.innerHTML = ` `;
     phones.forEach(phone => {
         const phoneDiv = document.createElement('div');
         phoneDiv.innerHTML = `
@@ -46,7 +47,6 @@ function displayPhones(phones) {
 function search() {
     const searchField = document.getElementById('search-item').value;
     // const searchText = searchField.value;
-    console.log(searchField);
     loadPhones(searchField);
 };
 //document.getElementById('search-btn').addEventListener('click', search());
